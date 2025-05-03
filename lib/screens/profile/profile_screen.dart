@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -34,10 +35,10 @@ class ProfileScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('John Doe', 
-                  style: TextStyle(color: Colors.white, fontSize: 20)),
+                const Text('John Doe',
+                    style: TextStyle(color: Colors.white, fontSize: 20)),
                 Text('Registered since 2023',
-                  style: TextStyle(color: Colors.grey)),
+                    style: TextStyle(color: Colors.grey)),
               ],
             ),
           ],
@@ -53,9 +54,9 @@ class ProfileScreen extends StatelessWidget {
         children: [
           SwitchListTile(
             title: const Text('Sleep Reminders',
-              style: TextStyle(color: Colors.white)),
+                style: TextStyle(color: Colors.white)),
             subtitle: const Text('Daily bedtime notifications',
-              style: TextStyle(color: Colors.grey)),
+                style: TextStyle(color: Colors.grey)),
             value: true,
             onChanged: (value) {},
           ),
@@ -63,16 +64,18 @@ class ProfileScreen extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.devices, color: Colors.blueAccent),
             title: const Text('Connected Devices',
-              style: TextStyle(color: Colors.white)),
+                style: TextStyle(color: Colors.white)),
             onTap: () {/* Navigate to devices */},
           ),
           const Divider(color: Colors.grey),
           ListTile(
-            leading: const Icon(Icons.logout, color: Colors.red),
-            title: const Text('Log Out',
-              style: TextStyle(color: Colors.red)),
-            onTap: () {/* Implement logout */},
-          ),
+              leading: const Icon(Icons.logout, color: Colors.red),
+              title: const Text('Log Out', style: TextStyle(color: Colors.red)),
+              onTap: () async {
+                await FirebaseAuth.instance.signOut();
+                // If you're using an AuthWrapper or similar mechanism,
+                // it will handle the redirection upon sign-out.
+              }),
         ],
       ),
     );

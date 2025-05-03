@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "836786636034",
+    "project_id": "sleepmonitor-41f08",
+    "storage_bucket": "sleepmonitor-41f08.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836786636034:android:11d450998216c916de6e1b",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHMiVMUO_5vL7d5VKv_kmX-LjmNaWfss4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836786636034:android:b7a3713b2524067ade6e1b",
+        "android_client_info": {
+          "package_name": "com.sleepmonitor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHMiVMUO_5vL7d5VKv_kmX-LjmNaWfss4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

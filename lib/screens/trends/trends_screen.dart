@@ -28,7 +28,8 @@ class TrendsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildChartCard(BuildContext context, {required String title, required Widget chart}) {
+  Widget _buildChartCard(BuildContext context,
+      {required String title, required Widget chart}) {
     return Card(
       color: const Color(0xFF1F1F1F),
       child: Padding(
@@ -36,10 +37,11 @@ class TrendsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title,
+            Text(
+              title,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: Colors.white,
-              ),
+                    color: Colors.white,
+                  ),
             ),
             const SizedBox(height: 16),
             SizedBox(height: 200, child: chart),
@@ -51,8 +53,12 @@ class TrendsScreen extends StatelessWidget {
 
   Widget _buildSleepScoreChart() {
     final spots = [
-      FlSpot(0, 72), FlSpot(1, 85), FlSpot(2, 78),
-      FlSpot(3, 90), FlSpot(4, 88), FlSpot(5, 82),
+      FlSpot(0, 72),
+      FlSpot(1, 85),
+      FlSpot(2, 78),
+      FlSpot(3, 90),
+      FlSpot(4, 88),
+      FlSpot(5, 82),
     ];
 
     return LineChart(
@@ -76,16 +82,15 @@ class TrendsScreen extends StatelessWidget {
   }
 
   Widget _buildHeartRateChart() {
-    final spots = [
-      FlSpot(0, 68), FlSpot(1, 72), FlSpot(2, 65),
-      FlSpot(3, 70), FlSpot(4, 75), FlSpot(5, 69),
-    ];
+    // final spots = [
+    //   FlSpot(0, 68), FlSpot(1, 72), FlSpot(2, 65),
+    //   FlSpot(3, 70), FlSpot(4, 75), FlSpot(5, 69),
+    // ];
 
     return LineChart(
       LineChartData(
-        // Similar configuration to sleep score chart
-      ),
+          // Similar configuration to sleep score chart
+          ),
     );
   }
-
 }
