@@ -49,6 +49,7 @@ class _LoginPageState extends State<LoginPage> {
               controller: emailController,
               decoration: const InputDecoration(labelText: "Email"),
             ),
+            SizedBox(height: 4), // ⬅️ this adds space
             TextField(
               controller: passwordController,
               decoration: const InputDecoration(labelText: "Password"),
